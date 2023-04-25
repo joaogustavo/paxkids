@@ -1,0 +1,576 @@
+/*
+-------------------------- RESET + HOVER --------------------------
+*/
+@import url("normalize.css");
+@import url("hover.css");
+/*
+---------------------------- WEBFONTS -----------------------------
+*/
+@import url("webfonts.css");
+/*
+------------------------------ MENU -------------------------------
+*/
+@import url("menu.css");
+/*
+---------------------- REDEFINICAO CSS GLOBAL ---------------------
+*/
+html {font-size: 62.5%;}
+*{text-rendering: optimizeLegibility;}
+::selection{background: #1ea9e2;color: #ffffff;}
+::-moz-selection{background: #1ea9e2;color: #ffffff;}
+body {
+	background: url(../img/padrao.jpg) repeat-y center top;
+	color: #3c3935;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: 2000px;
+	min-width: 280px;
+	position: relative;
+	z-index: 2;
+}
+/*
+------------------- CSS OCULTAR MOBILE EM DESKTOP ------------------
+*/
+@media screen and (min-width: 768px){.mobile{display: none !important;visibility: hidden !important;}}
+/*
+------------------- ESTRUTURA SECOES + ELEMENTOS -------------------
+*/
+.oculto{
+	display: none !important;
+	visibility: hidden !important;
+}
+.banners.corpo,.titulos,.conteudos,#rodape,.rodape{box-sizing: border-box;overflow: visible;position: relative;z-index: 5;}
+#topo {
+	background: url(../img/topo.jpg) no-repeat center top #ffffff;
+	max-width: 2000px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+}
+#topo:before {
+	background-image: -moz-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	background-image: -ms-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	content: '';
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.topo {
+	float: none;
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 2%;
+	position: relative;
+	width: 100%;
+}
+#logo {
+	display: block;
+	margin: 55px auto 61px auto;
+	max-width: 448px;
+	position: relative;
+	width: 100%;
+	z-index: 300;
+}
+.logo {
+	background: url(../img/logo.png) no-repeat left top;
+	background-size: contain;
+	display: block;
+	height: 103px;
+	max-width: 448px;
+	text-indent: -9999px;
+	width: 100%;
+}
+main {
+	background: #ffffff;
+	float: none !important;
+	padding: 0 !important;
+}
+.titulos-e-banners {
+	background: #ffffff;
+	float: none;
+	max-width: 2000px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+#titulos {
+	background: #ffffff;
+	border-bottom: solid 2px transparent;
+	padding: 15px 0;
+	position: relative;
+	width: 100%;
+	z-index: 9;
+}
+#titulos:after {
+	background: #CEDAE2;
+	bottom: -2px;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+.titulos {
+	color: #00AFF2;
+	display: block;
+	float: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 3rem;
+	letter-spacing: -.1rem;
+	line-height: 1rem;
+	margin: 0 auto;
+	max-width: 1140px;
+	padding: 0 2%;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	z-index: 9;
+}
+.titulos span,
+.titulos h1,
+.titulos h2,
+.titulos h3,
+.titulos h4,
+.titulos h5,
+.titulos h6 {
+	display: inline-block;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
+	z-index: 20;
+}
+.titulos h1,
+.titulos span {
+	font-size: 3rem;
+}
+.titulos h2 {
+	font-size: 2.5rem;
+}
+.titulos h3 {
+	font-size: 2rem;
+}
+.titulos h4 {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.titulos h5 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+.titulos h6 {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+.corpo {
+	background: #ffffff;
+	display: block;
+	float: none;
+	margin: 0 auto;
+	max-width: 2000px;
+	padding: 15px 0;
+	padding-top: 5px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.conteudos {
+	float: none;
+	font-size: 1.6rem;
+	letter-spacing: .05rem;
+	line-height: 2.7rem;
+	margin: 0 auto;
+	max-width: 1140px;
+	padding: 0 2%;
+	padding-top: 10px;
+	position: relative;
+	width: 100%;
+	z-index: 9;
+}
+.conteudos-nav {
+	background: #ffffff;
+	margin: 0 auto;
+	max-width: 2000px;
+	padding: 15px 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+.conteudos-nav:before {
+	background: #CEDAE2;
+	content: '';
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: -2px;
+	width: 100%;
+}
+.conteudos-nav a {
+	color: #0f6bac;
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.8rem;
+	margin: 0 auto;
+	max-width: 260px;
+	padding: 0 2%;
+	position: relative;
+	text-align: center;
+	text-shadow: 2.229px 2.007px 1px rgba(4, 4, 4, 0.129);
+	width: 100%;
+}
+.conteudos-nav a:hover,
+.conteudos-nav a:focus {
+	text-decoration: none;
+}
+#rodape {
+	background: url(../img/padrao.jpg) repeat-y center top;
+	color: #424242;
+	float: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.4rem;
+	margin: 0 auto;
+	max-width: 2000px;
+	padding: 30px 2%;
+	padding-top: 51px;
+	position: relative;
+	width: 100%;
+}
+#rodape:before {
+	background-image: -moz-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	background-image: -ms-linear-gradient( 0deg, rgb(30,169,226) 12%, rgb(140,198,62) 31%, rgb(237,0,140) 67%, rgb(252,185,42) 92%);
+	content: '';
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+#rodape a:hover {
+	text-decoration: none;
+}
+.rodape {
+	float: none;
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 2%;
+	width: 100%;
+}
+.contatos {
+	display: inline-block;
+	float: none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	min-width: 385px;
+	padding-left: 0;
+	vertical-align: top;
+}
+.contatos a {
+}
+.contatos a:hover,
+.contatos a:focus {
+	text-decoration: none;
+}
+.rodape-logo {
+	background: url(../img/rodape-logo.png) no-repeat left top;
+	background-size: contain;
+	display: block;
+	height: 74px;
+	margin-left: 35px;
+	margin-bottom: 30px;
+	max-width: 282px;
+	text-indent: -9999px;
+	width: 100%;
+}
+.endereco {
+	color: #8cc63e;
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-bottom: 20px;
+	padding-left: 45px;
+	position: relative;
+}
+.endereco:before {
+	background: url(../img/icone-localizacao.svg) no-repeat left top;
+	background-size: cover;
+	content: '';
+	height: 44px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 29px;
+}
+.telefone {
+	color: #1ea9e2;
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-bottom: 16px;
+	margin-right: 20px;
+	padding-left: 45px;
+	position: relative;
+}
+.telefone:before {
+	background: url(../img/icone-telefone.svg) no-repeat left top;
+	background-size: cover;
+	content: '';
+	height: 34px;
+	position: absolute;
+	left: 0;
+	top: -6px;
+	width: 34px;
+}
+.telefone span {
+	font-size: 2.2rem;
+	font-weight: 900;
+	vertical-align: top;
+}
+.whatsapp {
+	color: #1ea9e2;
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-bottom: 16px;
+	padding-left: 40px;
+	position: relative;
+}
+.whatsapp:before {
+	background: url(../img/icone-whatsapp.svg) no-repeat left top;
+	background-size: cover;
+	content: '';
+	height: 34px;
+	position: absolute;
+	left: 0;
+	top: -3px;
+	width: 34px;
+}
+.whatsapp span {
+	font-size: 2.2rem;
+	font-weight: 900;
+	vertical-align: top;
+}
+.email {
+	color: #FFBA00;
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-size: 2.2rem;
+	font-weight: 500;
+	margin-top: 5px;
+	padding-left: 46px;
+	position: relative;
+}
+.email:before {
+	background: url(../img/icone-email.svg) no-repeat left top;
+	background-size: cover;
+	content: '';
+	height: 23px;
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 33px;
+}
+.mapa {
+	display: inline-block;
+	float: none;
+	margin: 0;
+	max-width: 600px;
+	padding: 0;
+	width: 100%;
+}
+.gosites {
+	display: inline-block;
+	float: right;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-right: 4%;
+	margin-top: 25px;
+	max-width: 88px;
+	width: 100%;
+}
+.subir {
+	background: #ffffff;
+	border-radius: 50%;
+	bottom: 30px;
+	color: #bbbbbb;
+	display: block;
+	height: 45px;
+	max-width: 45px;
+	position: fixed;
+	right: 3%;
+	width: 100%;
+}
+.subir:hover,
+.subir:focus {
+	color: #A7A7A7;
+}
+.subir:before {
+	content: '\f139';
+	font-size: 5rem;
+	line-height: 4.7rem;
+	right: 0;
+}
+/*
+----------------------- CSS DE MEDIA QUERIES -----------------------
+*/
+@media screen and (max-width:1140px) {
+.contatos {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	max-width: 410px;
+	min-width: 1px;
+	width: 100%;
+}
+.mapa {
+	display: block;
+	margin: 0 auto;
+}
+.mapa iframe {
+	width: 100%;
+}
+}
+@media screen and (max-width:1000px) {
+.lateral { /* classe para conteudos com menu interno */
+	max-width: 1000px;
+	width: 100%;
+}
+}
+/*
+----------------------- CSS INFERIOR A 767px -----------------------
+*/
+@media screen and (max-width: 767px){
+/* ANIMACAO DE TODOS OS ELEMENTOS */
+*{text-rendering: geometricPrecision;-webkit-transition: all ease .7s;-moz-transition: all ease .7s;transition: all ease .7s;}
+
+/* OCULTAR ELEMENTOS DE DESKTOP */
+.desktop{display: none !important;visibility: hidden !important;}
+
+/* CONTORNO DE LINKS EM MOBILE */
+a:focus{outline: none;}.
+
+/* EXIBIR ELEMENTOS DE MOBILE E EXIBIR EM BLOCO 100% */
+mobile{display:block !important;float:none;visibility:visible !important;}
+#topo,
+.topo {
+	margin-bottom: 0;
+}
+/* ESTRUTURA SECOES + ELEMENTOS */
+.mobile-topo {
+	background: #ffffff;
+	box-shadow: rgba(221, 221, 221, 0.329412) 0px 1px 5px 0px;
+	left: 0px;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 51;
+}
+#logo-mobile {
+	float: left;
+	height: 46px;
+	margin-bottom: 9px;
+	margin-left: 15px;
+	margin-top: 8px;
+	max-width: 180px;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	z-index: 51;
+}
+.logo-mobile {
+	max-width: 180px;
+	position: relative;
+	width: 100%;
+	z-index: 52;
+}
+.titulos-e-banners {
+	margin-top: 61px;
+}
+#titulos {
+	left: 0;
+	letter-spacing: -.1rem;
+	margin-bottom: 0;
+	margin-top: 61px;
+	padding: 6px 2%;
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+.titulos {
+	display: inline-block;
+	line-height: 1rem;
+	padding: 0;
+}
+.titulos h1,
+.titulos span {
+	font-size: 2.2rem;
+}
+.titulos h2 {
+	font-size: 2rem;
+}
+.titulos h3 {
+	font-size: 1.8rem;
+}
+.titulos h4 {
+	font-size: 1.6rem;
+}
+.titulos h5 {
+	font-size: 1.2rem;
+}
+.titulos h6 {
+	font-size: 1rem;
+}
+.titulos span:before, .titulos h1:before, .titulos h2:before, .titulos h3:before, .titulos h4:before, .titulos h5:before, .titulos h6:before {
+	bottom: -3px;
+	height: 2px;
+}
+.titulos span:after, .titulos h1:after, .titulos h2:after, .titulos h3:after, .titulos h4:after, .titulos h5:after, .titulos h6:after {
+	bottom: -8px;
+	height: 2px;
+}
+.corpo {
+	padding-top: 0;
+}
+.conteudos {
+	font-size: 1.45rem;
+	margin-top: 0;
+	min-height: 20px;
+	padding: 6px 2% 0px 2%;
+}
+.subir {
+	bottom: 10px;
+	opacity: .8;
+	width: 45px;
+	z-index: 1000;
+}
+}
+@media screen and (max-width: 410px){
+.contatos {
+	max-width: 320px;
+	text-align: center;
+}
+.rodape-logo {
+	margin-left: auto;
+	margin-right: auto;
+}
+.endereco {
+	display: inline-block;
+	font-size: 1.25rem;
+	max-width: 285px;
+}
+.email {
+	display: inline-block;
+	max-width: 285px;
+}
+}
